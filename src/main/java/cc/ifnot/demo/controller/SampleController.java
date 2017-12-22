@@ -1,6 +1,8 @@
 package cc.ifnot.demo.controller;
 
 
+import cc.ifnot.demo.bean.Base;
+import cc.ifnot.demo.bean.Hello;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +13,15 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Controller
 @EnableAutoConfiguration
+@RequestMapping("/hello")
 public class SampleController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/")
+    @RequestMapping("*")
     @ResponseBody
-    String index() {
-        return "xxxx";
+    public Base index() {
+        return new Base();
     }
 
     @RequestMapping("/hello")

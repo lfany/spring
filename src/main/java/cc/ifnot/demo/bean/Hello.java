@@ -1,6 +1,6 @@
-package cc.ifnot.demo.controller;
+package cc.ifnot.demo.bean;
 
-public class Hello {
+public class Hello extends Base {
 
     private final long id;
     private final String hello;
