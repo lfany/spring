@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "ifnot.secret",
+      "type": "java.lang.String",
+      "description": "A description for 'ifnot.secret'"
+    },
+    {
+      "name": "ifnot.number",
+      "type": "java.lang.String",
+      "description": "A description for 'ifnot.number'"
+    },
+    {
+      "name": "ifnot.name",
+      "type": "java.lang.String",
+      "description": "A description for 'ifnot.name'"
+    },
+    {
+      "name": "ifnot.desc",
+      "type": "java.lang.String",
+      "description": "A description for 'ifnot.desc'"
+    }
+  ]
+}
