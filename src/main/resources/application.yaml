@@ -1,7 +1,7 @@
 #这个优先级较高(优先级4)
 
 #自定义配置
-ifnot: 
+ifnot:
   secret: ${random.value}
   number: ${random.int}
   name: www.ifnot.com
@@ -13,7 +13,41 @@ server:
   
 
 #spring jsckson
-spring: 
+spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Chongqing
+
+---
+
+#配置文件环境配置
+spring:
+  profiles:
+    active: dev
+
+  #jackson
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Chongqing
+
+#端口
+server:
+  port: 8888
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8080
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8082
+
+---
+spring:
+  profiles: test
+server:
+  port: 8081
