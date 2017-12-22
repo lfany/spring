@@ -1,0 +1,19 @@
+#这个优先级较高(优先级4)
+
+#自定义配置
+ifnot: 
+  secret: ${random.value}
+  number: ${random.int}
+  name: www.ifnot.com
+  desc: ${ifnot.name} is a domain name
+
+#端口
+server: 
+  port: 9000
+  
+
+#spring jsckson
+spring: 
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Chongqing

@@ -1,0 +1,12 @@
+#这个优先级较高(优先级2)
+
+#自定义配置
+ifnot: 
+  secret: ${random.value}
+  number: ${random.int}
+  name: www.ifnot.com
+  desc: the domain is ${ifnot.name}
+
+#端口
+server: 
+  port: 8000
