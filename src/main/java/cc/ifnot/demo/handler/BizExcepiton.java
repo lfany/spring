@@ -23,6 +23,7 @@ public class BizExcepiton {
         ModelAndView m = new ModelAndView();
         m.addObject("ifnotException", exception.getMessage());
         m.setViewName("error/500");
+        exception.printStackTrace();
         return m;
     }
 
@@ -37,6 +38,7 @@ public class BizExcepiton {
         ModelAndView m = new ModelAndView();
         m.addObject("ifnotException", exception.getMessage());
         m.setViewName("error/500");
+        exception.printStackTrace();
         return m;
     }
 
