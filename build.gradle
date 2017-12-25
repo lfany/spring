@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -44,4 +45,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile 'org.webjars:jquery:3.2.1'
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
