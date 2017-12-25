@@ -35,12 +35,13 @@ dependencies {
 //    }
 //
     configurations {
-        compile.exclude module : 'spring-boot-starter-logging'
+        compile.exclude module: 'spring-boot-starter-logging'
     }
 
     compile('org.springframework.boot:spring-boot-starter-log4j2')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-freemarker')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile 'org.webjars:jquery:3.2.1'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
