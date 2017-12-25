@@ -28,8 +28,13 @@ public class WebController {
         return "thymeleaf/index";
     }
 
-    @RequestMapping("error")
-    public String error(ModelMap map) {
+    @RequestMapping("exception")
+    public String exception(ModelMap map) throws Exception {
+        throw new Exception("测试异常");
+    }
+
+    @RequestMapping("runtimeexception")
+    public String runtimeexception(ModelMap map) {
         throw new RuntimeException("测试异常");
     }
 
