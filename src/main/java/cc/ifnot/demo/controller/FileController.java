@@ -20,7 +20,7 @@ public class FileController {
 
     @RequestMapping("upload")
     @ResponseBody
-    public String upload(@RequestParam("ifnotFile") MultipartFile file) {
+    public String upload(@RequestParam("xxx") MultipartFile file) {
         if (file.isEmpty()) {
             return "文件为空";
         }
