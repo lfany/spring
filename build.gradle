@@ -1,8 +1,12 @@
 buildscript {
     ext {
-        springBootVersion = '1.5.9.RELEASE'
+        springBootVersion = '2.0.1.RELEASE'
     }
     repositories {
+        maven {
+            //noinspection GroovyAssignabilityCheck
+            url 'http://maven.aliyun.com/mvn/repository'
+        }
         mavenCentral()
     }
     dependencies {
@@ -15,12 +19,18 @@ apply plugin: 'war'
 //apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 group = 'cc.ifnot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
+    maven {
+        //noinspection GroovyAssignabilityCheck
+        url 'http://maven.aliyun.com/mvn/repository'
+    }
     mavenCentral()
 }
 
@@ -50,7 +60,7 @@ dependencies {
     // Use MySQL Connector-J
     compile 'mysql:mysql-connector-java'
 
-    compile 'org.webjars:jquery:3.2.1'
+    compile 'org.webjars:jquery:3.3.1-1'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
